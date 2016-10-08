@@ -15,12 +15,18 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        TextView textView = new TextView(this);
-        textView.setTextSize(40);
-        textView.setText(message);
+        //TextView textView = new TextView(this);
+        //textView.setTextSize(40);
+        //textView.setText(message);
 
         ViewGroup layout = (ViewGroup) findViewById(R.id.activity_display_message);
-        layout.addView(textView);
+        //layout.addView(textView);
+        //textView.setText(message);
+        TextView textCode = (TextView) findViewById(R.id.textView_Code);
+        textCode.setText(message);
+
+        TextView textNumPassanger = (TextView) findViewById(R.id.textView_numPassanger);
+        textNumPassanger.setText("0");
 
     }
 }
