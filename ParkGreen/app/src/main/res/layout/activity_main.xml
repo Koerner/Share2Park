@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,8 +11,37 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="mhacks8.parkgreen.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="I'm the driver!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_driver" />
+
+        <Button
+            android:text="Hi, I want to check in a ride!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_passanger" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            app:srcCompat="@drawable/drivingtest"
+            android:id="@+id/imageButton2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            app:srcCompat="@drawable/calltaxi"
+            android:id="@+id/imageView2" />
+
+    </LinearLayout>
 </RelativeLayout>
