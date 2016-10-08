@@ -23,7 +23,8 @@
             android:text="I'm the driver!"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button_driver" />
+            android:id="@+id/button_driver"
+            android:onClick="sendMessage"/>
 
         <Button
             android:text="I want to check in a ride!"
@@ -44,6 +45,12 @@
             app:srcCompat="@drawable/calltaxi"
             android:id="@+id/imageButton3"
             android:scaleType="fitCenter" />
+
+        <EditText android:id="@+id/edit_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message" />
+
 
     </LinearLayout>
 </RelativeLayout>
