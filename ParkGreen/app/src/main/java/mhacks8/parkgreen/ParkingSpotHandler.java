@@ -44,10 +44,10 @@ public class ParkingSpotHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addProduct(Product product) {
+    public void addParkingSpot(ParkingSpot spot) {
 
         ContentValues values = new ContentValues();
-        values.put(COLUMN_PRODUCTNAME, product.getProductName());
+        values.put(COLUMN_SPOT_LOC, product.getProductName());
         values.put(COLUMN_QUANTITY, product.getQuantity());
 
         SQLiteDatabase db = this.getWritableDatabase();
