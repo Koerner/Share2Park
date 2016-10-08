@@ -3,7 +3,9 @@ package mhacks8.parkgreen;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class DisplayMessageActivity extends AppCompatActivity {
@@ -27,6 +29,12 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         TextView textNumPassanger = (TextView) findViewById(R.id.textView_numPassanger);
         textNumPassanger.setText("0");
+
+        Button park = (Button) findViewById(R.id.button_park);
+        park.setVisibility(View.VISIBLE);
+
+
+
 
     }
 }

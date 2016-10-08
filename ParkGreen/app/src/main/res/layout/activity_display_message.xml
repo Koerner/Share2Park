@@ -80,7 +80,16 @@
                 android:id="@+id/textView5"
                 android:layout_weight="1"
                 android:textAlignment="viewStart" />
+
         </LinearLayout>
+
+        <Button
+            android:text="You are qualified for ParkGreen. Click here to see parking spots near you."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_park"
+            android:layout_weight="1"
+            android:visibility="gone" />
 
     </LinearLayout>
 </RelativeLayout>
