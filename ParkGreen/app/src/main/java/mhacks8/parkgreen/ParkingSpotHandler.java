@@ -101,4 +101,4 @@ public class ParkingSpotHandler extends SQLiteOpenHelper {
         return result;
     }
 
-}*/
+*/}
