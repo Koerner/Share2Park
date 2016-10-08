@@ -43,27 +43,27 @@ public class ParkingSpotHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_PARKINGSPOTS);
         onCreate(db);
     }
-
+/*
     public void addParkingSpot(ParkingSpot spot) {
 
         ContentValues values = new ContentValues();
-        values.put(COLUMN_PRODUCTNAME, product.getProductName());
-        values.put(COLUMN_QUANTITY, product.getQuantity());
+        values.put(COLUMN_SPOT_LOC, spot.getProductName());
+        values.put(COLUMN_PLATE_NUM, spot.getQuantity());
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        db.insert(TABLE_PRODUCTS, null, values);
+        db.insert(TABLE_PARKINGSPOTS, null, values);
         db.close();
     }
 
     public ParkingSpot findParkingSpot(String productname) {
-        String query = "Select * FROM " + TABLE_PRODUCTS + " WHERE " + COLUMN_PRODUCTNAME + " =  \"" + productname + "\"";
+        String query = "Select * FROM " + TABLE_PARKINGSPOTS + " WHERE " + COLUMN_SPOT_LOC + " =  \"" + productname + "\"";
 
         SQLiteDatabase db = this.getWritableDatabase();
 
         Cursor cursor = db.rawQuery(query, null);
 
-        Product product = new Product();
+        ParkingSpot product = new ParkingSpot();
 
         if (cursor.moveToFirst()) {
             cursor.moveToFirst();
@@ -82,18 +82,18 @@ public class ParkingSpotHandler extends SQLiteOpenHelper {
 
         boolean result = false;
 
-        String query = "Select * FROM " + TABLE_PRODUCTS + " WHERE " + COLUMN_PRODUCTNAME + " =  \"" + productname + "\"";
+        String query = "Select * FROM " + TABLE_PARKINGSPOTS + " WHERE " + COLUMN_SPOT_LOC + " =  \"" + productname + "\"";
 
         SQLiteDatabase db = this.getWritableDatabase();
 
         Cursor cursor = db.rawQuery(query, null);
 
-        Product product = new Product();
+        ParkingSpot spot = new ParkingSpot();
 
         if (cursor.moveToFirst()) {
-            product.setID(Integer.parseInt(cursor.getString(0)));
-            db.delete(TABLE_PRODUCTS, COLUMN_ID + " = ?",
-                    new String[] { String.valueOf(product.getID()) });
+            spot.setID(Integer.parseInt(cursor.getString(0)));
+            db.delete(TABLE_PARKINGSPOTS, COLUMN_SPOT_NUM + " = ?",
+                    new String[] { String.valueOf(spot.getID()) });
             cursor.close();
             result = true;
         }
@@ -101,4 +101,4 @@ public class ParkingSpotHandler extends SQLiteOpenHelper {
         return result;
     }
 
-}
+}*/
