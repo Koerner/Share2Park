@@ -50,6 +50,13 @@
                 android:textAlignment="center" />
         </LinearLayout>
 
+        <Button
+            android:text="Pair with NFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_NFC"
+            android:onClick="clickNFC"/>
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="10pt" />

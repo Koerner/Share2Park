@@ -27,14 +27,21 @@ public class DisplayMessageActivity extends AppCompatActivity {
         TextView textCode = (TextView) findViewById(R.id.textView_Code);
         textCode.setText(message);
 
+        int numPassanger = 1;
         TextView textNumPassanger = (TextView) findViewById(R.id.textView_numPassanger);
-        textNumPassanger.setText("0");
+        textNumPassanger.setText(Integer.toString(numPassanger));
 
-        Button park = (Button) findViewById(R.id.button_park);
-        park.setVisibility(View.VISIBLE);
+        if(numPassanger > 0) {
+            Button park = (Button) findViewById(R.id.button_park);
+            park.setVisibility(View.VISIBLE);
+        }
 
 
 
 
+    }
+
+    public void clickNFC(View view) {
+        //code goes here
     }
 }
