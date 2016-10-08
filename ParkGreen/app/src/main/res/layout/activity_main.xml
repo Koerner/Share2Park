@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app2=""
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -26,22 +27,24 @@
             android:id="@+id/button_driver" />
 
         <Button
-            android:text="Hi, I want to check in a ride!"
+            android:text="I want to check in a ride!"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button_passanger" />
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="127dp"
+            android:layout_height="125dp"
             app:srcCompat="@drawable/drivingtest"
-            android:id="@+id/imageButton2" />
+            android:id="@+id/imageButton_driver"
+            android:scaleType="fitCenter" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="129dp"
+            android:layout_height="125dp"
             app:srcCompat="@drawable/calltaxi"
-            android:id="@+id/imageView2" />
+            android:id="@+id/imageButton_passanger"
+            android:scaleType="fitCenter" />
 
     </LinearLayout>
 </RelativeLayout>
