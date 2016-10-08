@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 public class DisplayMessageActivity extends AppCompatActivity {
 
     @Override
@@ -27,10 +28,10 @@ public class DisplayMessageActivity extends AppCompatActivity {
         TextView textCode = (TextView) findViewById(R.id.textView_Code);
         textCode.setText(message);
 
+
         int numPassanger = 1;
         TextView textNumPassanger = (TextView) findViewById(R.id.textView_numPassanger);
-        textNumPassanger.setText(Integer.toString(numPassanger));
-
+        textNumPassanger.setText(String.valueOf(((MyApplication)getApplication()).mLastLocation.getLatitude()));
         if(numPassanger > 0) {
             Button park = (Button) findViewById(R.id.button_park);
             park.setVisibility(View.VISIBLE);
@@ -41,7 +42,5 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
     }
 
-    public void clickNFC(View view) {
-        //code goes here
-    }
+
 }
