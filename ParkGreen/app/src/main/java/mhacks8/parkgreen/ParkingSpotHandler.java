@@ -32,7 +32,7 @@ public class ParkingSpotHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_PARKINGSPOTS_TABLE = "CREATE TABLE " +
                 TABLE_PARKINGSPOTS + "("
-                + COLUMN_SPOT_NUM + " INTEGER PRIMARY KEY," + COLUMN_SPOT_LOC
+                + COLUMN_SPOT_NUM + " INTEGER PRIMARY KEY," + COLUMN_SPOT_LOC_LAT
                 + " TEXT," + COLUMN_PLATE_NUM + " INTEGER" + ")";
         db.execSQL(CREATE_PARKINGSPOTS_TABLE);
 
