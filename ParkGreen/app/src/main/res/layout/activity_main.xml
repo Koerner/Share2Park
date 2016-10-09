@@ -17,7 +17,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
 
         <Button
             android:text="I'm the driver!"
@@ -45,6 +46,13 @@
             app:srcCompat="@drawable/calltaxi"
             android:id="@+id/imageButton3"
             android:scaleType="fitCenter" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/alltitudeText"
+            android:layout_weight="0.42" />
 
 
     </LinearLayout>

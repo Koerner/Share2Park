@@ -18,29 +18,41 @@ import com.google.android.gms.location.LocationServices;
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 
+
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+    Location plsWork;
     GoogleApiClient mGoogleApiClient;
-    TextView tvLatLong;
+
     public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+    TextView textAlt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        textAlt = (TextView) findViewById(R.id.alltitudeText);
         //Builds class for GoogleApi
-        if( mGoogleApiClient != null) {
-            GoogleApiClient mGoogleApiClient = new GoogleApiClient.Builder(this)
+        if( mGoogleApiClient == null) {
+             mGoogleApiClient = new GoogleApiClient.Builder(this)
                     .addConnectionCallbacks(this)
                     .addOnConnectionFailedListener(this)
                     .addApi(LocationServices.API)
                     .build();
         }
 
-    }
 
+
+    }
+    @Override
+    protected void onStart() {
+        mGoogleApiClient.connect();
+        super.onStart();
+    }
 
     @Override
     protected void onStop() {
+        System.out.println("what");
+        mGoogleApiClient.disconnect();
         super.onStop();
     }
 
@@ -58,12 +70,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
     @Override
-    public void onConnected(Bundle arg0) {
+    public void onConnected(Bundle connectionHint) {
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
 
-        ((MyApplication)getApplication()).mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        plsWork = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+
+        if (plsWork != null){
+            textAlt.setText(String.valueOf((plsWork.getLatitude())));
+        }
     }
 
     public void onConnectionSuspended(int arg0) {
@@ -72,13 +88,5 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     }
 
 
-    protected synchronized void buildGoogleApiClient() {
-        mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this)
-                .addApi(LocationServices.API)
-                .build();
-
-    }
 }
 
