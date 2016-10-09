@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "463299479319",
+    "firebase_url": "https://fir-parkgreen.firebaseio.com",
+    "project_id": "firebase-parkgreen",
+    "storage_bucket": "firebase-parkgreen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463299479319:android:2d0fa6fdaf1de1e4",
+        "android_client_info": {
+          "package_name": "mhacks8.parkgreen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463299479319-cjm7haek58tcsj5kb5lffpihmbldfk96.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "463299479319-4pekbsaujd2e3ljh8s8cg2gh8vucv44a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqgogwYUmDoVXlyoac9cpVtQLnNg38L3Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
