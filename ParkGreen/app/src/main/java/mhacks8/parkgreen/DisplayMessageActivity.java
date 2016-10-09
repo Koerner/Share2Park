@@ -35,19 +35,20 @@ public class DisplayMessageActivity extends AppCompatActivity {
         //textNumPassanger.setText(String.valueOf(((MyApplication)getApplication()).mLastLocation.getLatitude()));
         //System.out.println((((MyApplication)getApplication()).mLastLocation.getLatitude()));
 
-        if(numPassanger > 0) {
+        if (numPassanger > 0) {
             //Button park = (Button) findViewById(R.id.button_park);
             //park.setVisibility(View.VISIBLE);
         }
+    }
 
-        public void chgScrn(View view){
+    public void chgScrn(View view){
             Intent intent2 = new Intent(this, driver_park_screen.class);
 
             startActivity(intent2);
-        }
-
-
     }
+
+
+
 
 
 }
