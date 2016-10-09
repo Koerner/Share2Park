@@ -24,7 +24,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView"
             android:layout_weight="0.02"
-            android:textColor="@color/cast_expanded_controller_background_color" />
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColorHighlight="@color/cast_expanded_controller_background_color"
+            android:textColor="@color/cast_expanded_controller_background_color"
+            android:textAlignment="center" />
 
         <TextView
             android:text="Your Driver Code:"
@@ -72,7 +75,7 @@
             android:layout_weight="0.02" />
 
         <TextView
-            android:text="Passengers Added"
+            android:text="Passengers Checked In"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView6"

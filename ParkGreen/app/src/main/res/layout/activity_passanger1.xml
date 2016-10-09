@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app=""
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_passanger1"
     android:layout_width="match_parent"
@@ -47,10 +48,10 @@
         android:ems="10"
         android:id="@+id/passanger_code"
         android:hint="6 Digit Driver Code"
-        android:textAlignment="center"
         android:layout_marginTop="9dp"
         android:layout_below="@+id/textView2"
         android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
+        android:layout_alignStart="@+id/editText2"
+        android:textAlignment="center" />
 
 </RelativeLayout>
