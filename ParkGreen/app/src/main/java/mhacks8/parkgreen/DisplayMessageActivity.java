@@ -28,10 +28,14 @@ public class DisplayMessageActivity extends AppCompatActivity {
         TextView textCode = (TextView) findViewById(R.id.textView_Code);
         textCode.setText(message);
 
+        //textCode.setText(String.valueOf(((MyApplication)getApplication()).mLastLocation.getLatitude()));
+
 
         int numPassanger = 1;
         TextView textNumPassanger = (TextView) findViewById(R.id.textView_numPassanger);
-        textNumPassanger.setText(String.valueOf(((MyApplication)getApplication()).mLastLocation.getLatitude()));
+        //textNumPassanger.setText(String.valueOf(((MyApplication)getApplication()).mLastLocation.getLatitude()));
+        //System.out.println((((MyApplication)getApplication()).mLastLocation.getLatitude()));
+
         if(numPassanger > 0) {
             Button park = (Button) findViewById(R.id.button_park);
             park.setVisibility(View.VISIBLE);
