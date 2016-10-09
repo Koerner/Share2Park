@@ -19,38 +19,38 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/editText2" />
 
-    <EditText
+    <Button
+        android:text="Continue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/passanger_code"
+        android:id="@+id/continue_button"
+        android:background="@color/colorPrimary"
+        android:textColor="?android:attr/detailsElementBackground"
         android:layout_alignBaseline="@+id/editText2"
         android:layout_alignBottom="@+id/editText2"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2"
-        android:hint="6 Digit Driver Code"
-        android:textAlignment="center" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:text="Enter Driver Code Here:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
-        android:layout_marginBottom="14dp"
         android:textAppearance="@android:style/TextAppearance.Large"
-        android:layout_above="@+id/editText2"
+        android:layout_marginTop="85dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="Continue"
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:id="@+id/continue_button"
-        android:background="@color/colorPrimary"
-        android:textColor="?android:attr/detailsElementBackground"
-        android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true" />
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/passanger_code"
+        android:hint="6 Digit Driver Code"
+        android:textAlignment="center"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
 
 </RelativeLayout>

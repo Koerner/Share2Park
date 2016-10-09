@@ -19,85 +19,87 @@
         android:layout_alignParentStart="true">
 
         <TextView
-            android:text=" Hi Driver, welcome on board, making Detroit a better place."
+            android:text="In order to qualify for ParkGreen, your passenger must upload your driver code as it appears on your screen."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10pt" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="48dp">
-
-            <TextView
-                android:text="Your Driver Code:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView3"
-                android:layout_weight="1" />
-
-            <TextView
-                android:text="CODE_HERE"
-                android:layout_width="213dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView_Code"
-                android:padding="5pt"
-                android:clickable="false"
-                android:textAlignment="center" />
-        </LinearLayout>
-
-        <Button
-            android:text="Pair with NFC"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button_NFC"/>
-         //   android:onClick="clickNFC"/>
-
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10pt" />
+            android:id="@+id/textView"
+            android:layout_weight="0.02"
+            android:textColor="@color/cast_expanded_controller_background_color" />
 
         <TextView
-            android:text="Get qualified for ParkGreen"
+            android:text="Your Driver Code:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView4" />
+            android:id="@+id/textView3"
+            android:textAlignment="center"
+            android:textColor="@color/cast_expanded_controller_background_color"
+            android:textAllCaps="false"
+            android:textStyle="normal|bold"
+            android:scaleX="1.25"
+            android:scaleY="1.25" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="57dp">
-
-            <TextView
-                android:text="#passanger"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView_numPassanger"
-                android:layout_weight="1"
-                android:textAlignment="textEnd" />
-
-            <TextView
-                android:text="/1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView5"
-                android:layout_weight="1"
-                android:textAlignment="viewStart" />
-
-        </LinearLayout>
-
-        <Button
-            android:text="You are qualified for ParkGreen. Click here to see parking spots near you."
+        <TextView
+            android:text="CODE_HERE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button_park"
-            android:layout_weight="1"
-            android:visibility="gone" />
+            android:id="@+id/textView_Code"
+            android:padding="5pt"
+            android:clickable="false"
+            android:textAlignment="center"
+            android:scaleY="1.5"
+            android:scaleX="1.5"
+            android:textColor="@color/cast_expanded_controller_background_color" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02" />
+
+        <TextView
+            android:text="0/1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/@+id/numPassengers"
+            android:textSize="@android:dimen/notification_large_icon_width"
+            tools:scaleX=".5"
+            android:scaleY=".5"
+            android:textColor="@color/cast_expanded_controller_background_color" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02" />
+
+        <TextView
+            android:text="Passengers Added"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:layout_weight="0.06"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:textColor="@color/cast_expanded_controller_background_color"
+            android:textAlignment="center" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.29" /><![CDATA[
+
+
+
+        //   android:onClick="clickNFC"/>
+
+
+
+
+
+
+
+
+
+
+    ]]>
     </LinearLayout>
 </RelativeLayout>
