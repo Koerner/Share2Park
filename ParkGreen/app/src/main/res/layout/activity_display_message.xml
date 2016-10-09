@@ -24,9 +24,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView"
             android:layout_weight="0.02"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColorHighlight="@color/cast_expanded_controller_background_color"
-            android:textColor="@color/cast_expanded_controller_background_color"
+
             android:textAlignment="center" />
 
         <TextView
@@ -35,7 +33,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
             android:textAlignment="center"
-            android:textColor="@color/cast_expanded_controller_background_color"
             android:textAllCaps="false"
             android:textStyle="normal|bold"
             android:scaleX="1.25"
@@ -50,29 +47,17 @@
             android:clickable="false"
             android:textAlignment="center"
             android:scaleY="1.5"
-            android:scaleX="1.5"
-            android:textColor="@color/cast_expanded_controller_background_color" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.02" />
+            android:scaleX="1.5" />
 
         <TextView
-            android:text="0/1"
+            android:text="1/1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:id="@+id/@+id/numPassengers"
+            android:id="@+id/numPassengers"
             android:textSize="@android:dimen/notification_large_icon_width"
             tools:scaleX=".5"
-            android:scaleY=".5"
-            android:textColor="@color/cast_expanded_controller_background_color" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.02" />
+            android:scaleY=".5" />
 
         <TextView
             android:text="Passengers Checked In"
@@ -82,27 +67,23 @@
             android:layout_weight="0.06"
             android:scaleX="1.5"
             android:scaleY="1.5"
-            android:textColor="@color/cast_expanded_controller_background_color"
             android:textAlignment="center" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.29" /><![CDATA[
+            android:layout_weight="0.29" />
 
-
-
-        //   android:onClick="clickNFC"/>
-
-
-
-
-
-
-
-
-
-
-    ]]>
+        <Button
+            android:text="Continue"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="?android:attr/detailsElementBackground"
+            android:layout_alignBaseline="@+id/editText2"
+            android:layout_alignBottom="@+id/editText2"
+            android:textAlignment="center"
+            android:id="@+id/_driver_button"
+            android:onClick="chgScrn" />
     </LinearLayout>
 </RelativeLayout>

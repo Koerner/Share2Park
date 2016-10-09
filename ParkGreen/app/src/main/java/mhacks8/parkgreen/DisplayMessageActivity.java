@@ -31,16 +31,20 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
 
         int numPassanger = 1;
-        TextView textNumPassanger = (TextView) findViewById(R.id.textView_numPassanger);
+        //TextView textNumPassanger = (TextView) findViewById(R.id.textView_numPassanger);
         //textNumPassanger.setText(String.valueOf(((MyApplication)getApplication()).mLastLocation.getLatitude()));
         //System.out.println((((MyApplication)getApplication()).mLastLocation.getLatitude()));
 
         if(numPassanger > 0) {
-            Button park = (Button) findViewById(R.id.button_park);
-            park.setVisibility(View.VISIBLE);
+            //Button park = (Button) findViewById(R.id.button_park);
+            //park.setVisibility(View.VISIBLE);
         }
 
+        public void chgScrn(View view){
+            Intent intent2 = new Intent(this, driver_park_screen.class);
 
+            startActivity(intent2);
+        }
 
 
     }

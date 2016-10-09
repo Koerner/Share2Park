@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/driver_park_screen"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04" />
+
+    <TextView
+        android:text="Parking Spot Number:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:hint="6 Digit Driver Code"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2"
+        android:textAlignment="center"
+        android:text="Enter Parking Spot"
+        android:textColor="?attr/colorControlNormal"
+        android:textSize="18sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04" />
+
+    <TextView
+        android:text="License Plate Number:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:layout_weight="0.04"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Enter License Plate"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textColor="?attr/colorControlNormal" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.11" />
+
+    <TextView
+        android:text="You have until:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        android:layout_weight="0.12"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="5:00 PM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:layout_weight="0.04"
+        android:textAlignment="center"
+        android:textSize="34dp"
+        android:textStyle="normal|bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.58" />
+
+    <Button
+        android:text="Confirm Park!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_weight="0.04"
+        android:background="@color/colorPrimary" />
+
+</LinearLayout>
