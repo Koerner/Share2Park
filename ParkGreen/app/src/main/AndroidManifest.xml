@@ -8,6 +8,9 @@
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="true" />
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name=".MyApplication"
@@ -24,11 +27,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".DisplayMessageActivity" />
-        <activity android:name=".Passanger1"></activity>
+        <activity android:name=".Passanger1" />
+        <activity android:name=".park"></activity>
     </application>
-    <!--  Internet Permissions -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
 
 </manifest>

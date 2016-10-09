@@ -24,10 +24,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView"
             android:layout_weight="0.02"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColorHighlight="@color/cast_expanded_controller_background_color"
-            android:textColor="@color/cast_expanded_controller_background_color"
-            android:textAlignment="center" />
+             />
 
         <TextView
             android:text="Your Driver Code:"
@@ -35,7 +32,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
             android:textAlignment="center"
-            android:textColor="@color/cast_expanded_controller_background_color"
+
             android:textAllCaps="false"
             android:textStyle="normal|bold"
             android:scaleX="1.25"
@@ -51,7 +48,7 @@
             android:textAlignment="center"
             android:scaleY="1.5"
             android:scaleX="1.5"
-            android:textColor="@color/cast_expanded_controller_background_color" />
+             />
 
         <Space
             android:layout_width="match_parent"
@@ -63,11 +60,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:id="@+id/@+id/numPassengers"
+            android:id="@+id/numPassengers"
             android:textSize="@android:dimen/notification_large_icon_width"
             tools:scaleX=".5"
             android:scaleY=".5"
-            android:textColor="@color/cast_expanded_controller_background_color" />
+             />
 
         <Space
             android:layout_width="match_parent"
@@ -82,27 +79,11 @@
             android:layout_weight="0.06"
             android:scaleX="1.5"
             android:scaleY="1.5"
-            android:textColor="@color/cast_expanded_controller_background_color"
             android:textAlignment="center" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.29" /><![CDATA[
-
-
-
-        //   android:onClick="clickNFC"/>
-
-
-
-
-
-
-
-
-
-
-    ]]>
+            android:layout_weight="0.29" />
     </LinearLayout>
 </RelativeLayout>
