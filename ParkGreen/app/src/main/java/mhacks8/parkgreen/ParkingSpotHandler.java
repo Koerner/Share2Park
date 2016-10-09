@@ -30,12 +30,12 @@ public class ParkingSpotHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_PARKINGSPOTS_TABLE = "CREATE TABLE " +
+      /*  String CREATE_PARKINGSPOTS_TABLE = "CREATE TABLE " +
                 TABLE_PARKINGSPOTS + "("
                 + COLUMN_SPOT_NUM + " INTEGER PRIMARY KEY," + COLUMN_SPOT_LOC
                 + " TEXT," + COLUMN_PLATE_NUM + " INTEGER" + ")";
         db.execSQL(CREATE_PARKINGSPOTS_TABLE);
-
+        */
     }
 
     @Override
@@ -73,11 +73,11 @@ public class ParkingSpotHandler extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             cursor.moveToFirst();
             spot.set_spot_num(Integer.parseInt(cursor.getString(0)));
-            spot.setProductName(cursor.getString(1));
-            spot.setQuantity(Integer.parseInt(cursor.getString(2)));
-            spot.setQuantity(Integer.parseInt(cursor.getString(3)));
-            spot.setQuantity(Integer.parseInt(cursor.getString(4)));
-            cursor.close();
+           // spot.setProductName(cursor.getString(1));
+           // spot.setQuantity(Integer.parseInt(cursor.getString(2)));
+           // spot.setQuantity(Integer.parseInt(cursor.getString(3)));
+           // spot.setQuantity(Integer.parseInt(cursor.getString(4)));
+           // cursor.close();
         } else {
             spot = null;
         }
