@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-
 public class DisplayMessageActivity extends AppCompatActivity {
 
     @Override
