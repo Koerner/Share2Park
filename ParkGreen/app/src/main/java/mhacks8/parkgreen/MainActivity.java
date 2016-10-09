@@ -182,7 +182,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     .addApi(LocationServices.API)
                     .build();
         }
+<<<<<<< HEAD
+=======
         //textAlt = (TextView) findViewById(R.id.alltitudeText);
+>>>>>>> 9b565b6f0e440273be53a92ec6e17f7fb31d4a32
 
     }
     @Override
@@ -202,6 +205,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
+<<<<<<< HEAD
+
+=======
         // EditText editText = (EditText) findViewById(R.id.edit_message);
         Random rand = new Random();
         Integer rand_num = rand.nextInt((999999-100000)+100000);
@@ -214,6 +220,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         //new CreateNewUser().execute();
 
         intent.putExtra(EXTRA_MESSAGE, message);
+>>>>>>> 9b565b6f0e440273be53a92ec6e17f7fb31d4a32
         startActivity(intent);
     }
 
@@ -227,7 +234,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
-        System.out.println("fuuuck");        plsWork = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+            plsWork = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
         if (plsWork != null){
             textAlt.setText(String.valueOf((plsWork.getLatitude())));
