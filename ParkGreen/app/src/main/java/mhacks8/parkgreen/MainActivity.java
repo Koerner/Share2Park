@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
@@ -47,7 +49,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         // EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = "TEST123";//editText.getText().toString();
+        Random rand = new Random();
+        Integer rand_num = rand.nextInt((999999-100000)+100000);
+        String message = rand_num.toString(); //editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
