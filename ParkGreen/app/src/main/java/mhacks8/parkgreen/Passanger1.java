@@ -13,7 +13,7 @@ public class Passanger1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_passanger1);
 
-        passanger_code = (EditText) findViewById(R.id.passanger_code);
+        EditText passanger_code = (EditText) findViewById(R.id.passanger_code);
 
     }
 }
