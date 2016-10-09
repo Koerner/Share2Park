@@ -10,6 +10,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Context;
+
+import android.telephony.TelephonyManager;
+
+import java.util.Random;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -59,7 +64,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         // EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = "TEST123";//editText.getText().toString();
+        Random rand = new Random();
+        Integer rand_num = rand.nextInt((999999-100000)+100000);
+        String message = rand_num.toString(); //editText.getText().toString();
+        final TelephonyManager mTelephony = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        String myAndroidDeviceId = mTelephony.getDeviceId(); //this needs to be sent to the database
+        float x = 1; //this needs to be sent to the database
+        float y = 1; //this needs to be sent to the database
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
