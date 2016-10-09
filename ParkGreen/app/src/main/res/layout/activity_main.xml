@@ -15,10 +15,21 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:weightSum="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:weightSum="1">
+        android:layout_alignParentStart="true">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            app:srcCompat="@drawable/drivingtest"
+            android:id="@+id/imageView" />
 
         <Button
             android:text="I'm the driver!"
@@ -27,32 +38,23 @@
             android:id="@+id/button_driver"
             android:onClick="sendMessage"/>
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.24" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            app:srcCompat="@drawable/calltaxi"
+            android:id="@+id/imageView2"
+            android:layout_weight="0.03" />
+
         <Button
             android:text="I want to check in a ride!"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button_passanger" />
-
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="127dp"
-            app:srcCompat="@drawable/drivingtest"
-            android:id="@+id/imageButton2"
-            android:scaleType="fitCenter" />
-
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="146dp"
-            app:srcCompat="@drawable/calltaxi"
-            android:id="@+id/imageButton3"
-            android:scaleType="fitCenter" />
-
-        <TextView
-            android:text="TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/alltitudeText"
-            android:layout_weight="0.42" />
 
 
     </LinearLayout>
