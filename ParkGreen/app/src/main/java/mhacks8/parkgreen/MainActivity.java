@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textAlt = (TextView) findViewById(R.id.alltitudeText);
         //Builds class for GoogleApi
         if( mGoogleApiClient == null) {
              mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -44,13 +43,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     .addApi(LocationServices.API)
                     .build();
         }
-
-
+        textAlt = (TextView) findViewById(R.id.alltitudeText);
 
     }
     @Override
     protected void onStart() {
         mGoogleApiClient.connect();
+        System.out.println("whats");
+
         super.onStart();
     }
 
@@ -85,11 +85,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
-
-        plsWork = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        System.out.println("fuuuck");        plsWork = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
         if (plsWork != null){
             textAlt.setText(String.valueOf((plsWork.getLatitude())));
+            System.out.println(String.valueOf((plsWork.getLatitude())));
+            System.out.println("greg");
+
         }
     }
 
