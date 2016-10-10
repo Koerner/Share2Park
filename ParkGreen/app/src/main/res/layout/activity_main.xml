@@ -54,7 +54,8 @@
             android:text="I want to check in a ride!"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button_passanger" />
+            android:id="@+id/button_passanger"
+            android:onClick="sendPas"/>
 
 
     </LinearLayout>

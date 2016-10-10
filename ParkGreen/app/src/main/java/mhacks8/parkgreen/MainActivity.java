@@ -182,10 +182,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     .addApi(LocationServices.API)
                     .build();
         }
-<<<<<<< HEAD
-=======
+
         //textAlt = (TextView) findViewById(R.id.alltitudeText);
->>>>>>> 9b565b6f0e440273be53a92ec6e17f7fb31d4a32
+
 
     }
     @Override
@@ -205,22 +204,27 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-<<<<<<< HEAD
 
-=======
         // EditText editText = (EditText) findViewById(R.id.edit_message);
         Random rand = new Random();
         Integer rand_num = rand.nextInt((999999-100000)+100000);
         String message = rand_num.toString(); //editText.getText().toString();
-        final TelephonyManager mTelephony = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-        String myAndroidDeviceId = mTelephony.getDeviceId(); //this needs to be sent to the database
+        //final TelephonyManager mTelephony = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        //String myAndroidDeviceId = mTelephony.getDeviceId(); //this needs to be sent to the database
         float x = 1; //this needs to be sent to the database
         float y = 1; //this needs to be sent to the database
 
         //new CreateNewUser().execute();
 
         intent.putExtra(EXTRA_MESSAGE, message);
->>>>>>> 9b565b6f0e440273be53a92ec6e17f7fb31d4a32
+        startActivity(intent);
+    }
+
+    public void sendPas(View view) {
+        Intent intent = new Intent(this, Passanger1.class);
+
+
+        //new CreateNewUser().execute();
         startActivity(intent);
     }
 
